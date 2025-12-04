@@ -1,36 +1,124 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lucas Mancini Dev</title>
+    <meta charset="utf-8" />
+    <!-- viewport otimizado -->
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <!-- título e descrição (faça a descrição específica para você) -->
+    <title>
+      Lucas Mancini — Desenvolvedor Fullstack (Java · Python · React)
+    </title>
     <meta
       name="description"
-      content="Portfólio profissional de desenvolvedor fullstack especializado em criar soluções web modernas e escaláveis"
+      content="Portfólio de Lucas Mancini — desenvolvedor fullstack. Criação de APIs em Java/Spring Boot e Python/Django, aplicações React e landing pages otimizadas para conversão. Disponível para projetos e vagas júnior."
     />
     <meta name="author" content="Lucas Mancini" />
+    <meta
+      name="keywords"
+      content="Desenvolvedor Fullstack, Java, Spring Boot, Python, Django, React, TypeScript, Tailwind"
+    />
+    <meta name="robots" content="index,follow" />
+
+    <!-- canonical: substitua pela URL real do seu site -->
+    <link rel="canonical" href="https://REPLACE_WITH_YOUR_DOMAIN/" />
+
+    <!-- favicons / apple touch -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicons/favicon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicons/favicon.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- theme color (barra do navegador em mobile) -->
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="color-scheme" content="dark light" />
+
+    <!-- Open Graph / Twitter (use URLs absolutas para og:image) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Lucas Mancini" />
+    <meta
+      property="og:title"
+      content="Lucas Mancini — Desenvolvedor Fullstack"
+    />
+    <meta
+      property="og:description"
+      content="Desenvolvedor fullstack: APIs em Java/Spring Boot e Python/Django, aplicações React e landing pages responsivas. Disponível para projetos e vagas júnior."
+    />
+    <meta property="og:url" content="https://REPLACE_WITH_YOUR_DOMAIN/" />
+    <meta
+      property="og:image"
+      content="https://REPLACE_WITH_YOUR_DOMAIN/public/assets/og-preview.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+
+    <!-- Preconnect / prefetch (Google Fonts) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- OBS: para perf. ideal em produção, prefira self-host das fontes (ver nota abaixo) -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
 
-    <meta
-      property="og:title"
-      content="Desenvolvedor Fullstack | Portfólio Profissional"
+    <!-- Preload de imagem crítica (og-preview) - troque pela sua imagem -->
+    <link
+      rel="preload"
+      href="/assets/og-preview.png"
+      as="image"
+      type="image/png"
     />
-    <meta
-      property="og:description"
-      content="Portfólio profissional de desenvolvedor fullstack especializado em criar soluções web modernas e escaláveis"
-    />
-    <meta property="og:type" content="website" />
 
-    <meta name="twitter:card" content="summary_large_image" />
+    <!-- Vite entry -->
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Structured Data (JSON-LD) — ajuste os URLs e redes sociais -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Lucas Mancini",
+        "url": "https://REPLACE_WITH_YOUR_DOMAIN",
+        "sameAs": [
+          "https://github.com/REPLACE_WITH_USERNAME",
+          "https://www.linkedin.com/in/REPLACE_WITH_USERNAME"
+        ],
+        "jobTitle": "Desenvolvedor Fullstack",
+        "description": "Desenvolvedor Web com foco em backend (Java/Spring Boot, Python/Django) e front com React. Criação de APIs, sistemas internos e landing pages.",
+        "email": "mailto:REPLACE_WITH_EMAIL"
+      }
+    </script>
+
+    <!-- Nota sobre CSP: aplique via header do servidor para segurança. Exemplo simples no servidor: Content-Security-Policy: default-src 'self'; -->
+    <!-- Se usar analytics, adicione aqui (ou via tag manager) e ajuste CSP/consentimento. -->
+
+    <!-- Optional: analytics snippet (ex.: Plausible, GA4) - adicionar somente se tiver permissão/consent -->
   </head>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+  <body class="antialiased bg-white text-slate-900">
+    <!-- noscript para casos onde JS está desativado -->
+    <noscript>
+      <strong
+        >Este site funciona melhor com JavaScript habilitado. Por favor,
+        habilite JavaScript no seu navegador.</strong
+      >
+    </noscript>
+
+    <div id="root" role="main" aria-label="Conteúdo principal"></div>
   </body>
 </html>
