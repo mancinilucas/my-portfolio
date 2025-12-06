@@ -31,15 +31,12 @@ const Skills = () => {
           className="space-y-12"
         >
           <div className="space-y-4">
-            <p className="text-primary font-mono text-sm tracking-wider">
-              STACK TECNOLÓGICO
-            </p>
+            <p className="text-primary font-mono text-sm tracking-wider">STACK TECNOLÓGICO</p>
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
               Ferramentas & Tecnologias
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl">
-              Tecnologias modernas que utilizo para criar soluções robustas e
-              escaláveis
+              Tecnologias modernas que utilizo para criar soluções robustas e escaláveis
             </p>
           </div>
 
@@ -48,16 +45,12 @@ const Skills = () => {
               <motion.div
                 key={skill.name}
                 initial={{ opacity: 0, y: 20 }}
-                animate={
-                  isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
-                }
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
                 className="group p-6 rounded-lg bg-card border border-border hover:border-primary transition-all hover:shadow-lg cursor-default"
               >
                 <div className="space-y-2">
-                  <p className="text-xs text-muted-foreground font-mono">
-                    {skill.category}
-                  </p>
+                  <p className="text-xs text-muted-foreground font-mono">{skill.category}</p>
                   <p className="font-semibold text-lg group-hover:text-primary transition-colors">
                     {skill.name}
                   </p>

@@ -38,12 +38,7 @@ const About: React.FC = () => {
   const isInView = useInView(ref, { once: true, margin: "-120px" });
 
   return (
-    <section
-      ref={ref}
-      id="about"
-      className="py-32 px-4"
-      aria-labelledby="about-title"
-    >
+    <section ref={ref} id="about" className="py-32 px-4" aria-labelledby="about-title">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -52,14 +47,9 @@ const About: React.FC = () => {
           className="space-y-8"
         >
           <div className="space-y-4">
-            <p className="text-primary font-mono text-sm tracking-wider">
-              SOBRE MIM
-            </p>
+            <p className="text-primary font-mono text-sm tracking-wider">SOBRE MIM</p>
 
-            <h2
-              id="about-title"
-              className="text-4xl md:text-5xl font-bold tracking-tight"
-            >
+            <h2 id="about-title" className="text-4xl md:text-5xl font-bold tracking-tight">
               Transformando código em resultados reais
             </h2>
           </div>
@@ -69,15 +59,15 @@ const About: React.FC = () => {
             {/* Texto principal (sempre acima the timeline visually on stacked layouts) */}
             <div className="space-y-6 text-base md:text-lg text-muted-foreground leading-relaxed">
               <p className="text-left md:text-justify">
-                Sou <strong>Lucas Mancini</strong>, desenvolvedor fullstack com
-                foco em backend. Entrego soluções digitais com atenção à
-                manutenção, escalabilidade e experiência do usuário.
+                Sou <strong>Lucas Mancini</strong>, desenvolvedor fullstack com foco em backend.
+                Entrego soluções digitais com atenção à manutenção, escalabilidade e experiência do
+                usuário.
               </p>
 
               <p className="text-left md:text-justify">
-                Tenho experiência em ambiente institucional, atuação voluntária
-                e trabalho direto com clientes como freelancer — o que me trouxe
-                flexibilidade para lidar com diferentes demandas e contextos.
+                Tenho experiência em ambiente institucional, atuação voluntária e trabalho direto
+                com clientes como freelancer — o que me trouxe flexibilidade para lidar com
+                diferentes demandas e contextos.
               </p>
 
               <p className="text-sm text-muted-foreground">
@@ -97,9 +87,7 @@ const About: React.FC = () => {
                     <motion.li
                       key={idx}
                       initial={{ opacity: 0, x: -16 }}
-                      animate={
-                        isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -16 }
-                      }
+                      animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -16 }}
                       transition={{ duration: 0.5, delay }}
                       className="relative"
                     >
@@ -118,9 +106,7 @@ const About: React.FC = () => {
                       <div className="p-4 md:p-6 rounded-lg bg-card border border-border shadow-card">
                         <div className="flex flex-col sm:flex-row items-start justify-between gap-2 sm:gap-4">
                           <div className="min-w-0 flex-1">
-                            <h3 className="font-semibold text-base md:text-lg">
-                              {exp.role}
-                            </h3>
+                            <h3 className="font-semibold text-base md:text-lg">{exp.role}</h3>
                             <p className="text-sm text-muted-foreground mt-1 break-words">
                               {exp.company}
                             </p>

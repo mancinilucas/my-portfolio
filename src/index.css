@@ -39,11 +39,7 @@ All colors MUST be HSL.
     --radius: 0.75rem;
 
     /* Custom portfolio tokens */
-    --gradient-hero: linear-gradient(
-      135deg,
-      hsl(162 85% 25%) 0%,
-      hsl(162 85% 35%) 100%
-    );
+    --gradient-hero: linear-gradient(135deg, hsl(162 85% 25%) 0%, hsl(162 85% 35%) 100%);
     --shadow-card: 0 4px 24px -4px hsl(0 0% 0% / 0.06);
     --shadow-hover: 0 8px 32px -8px hsl(162 85% 25% / 0.15);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

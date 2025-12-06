@@ -55,12 +55,8 @@ const Projects = () => {
           className="space-y-12"
         >
           <div className="space-y-4">
-            <p className="text-primary font-mono text-sm tracking-wider">
-              PORTFÓLIO
-            </p>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-              Projetos em Destaque
-            </h2>
+            <p className="text-primary font-mono text-sm tracking-wider">PORTFÓLIO</p>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Projetos em Destaque</h2>
             <p className="text-xl text-muted-foreground max-w-2xl">
               Alguns dos projetos que desenvolvi recentemente
             </p>
@@ -71,9 +67,7 @@ const Projects = () => {
               <motion.div
                 key={project.title}
                 initial={{ opacity: 0, y: 20 }}
-                animate={
-                  isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
-                }
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group p-8 rounded-lg bg-card border border-border hover:border-primary transition-all hover:shadow-xl"
               >
@@ -81,9 +75,7 @@ const Projects = () => {
                   <h3 className="text-2xl font-bold group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {project.description}
-                  </p>
+                  <p className="text-muted-foreground leading-relaxed">{project.description}</p>
 
                   <div className="flex flex-wrap gap-2 pt-2">
                     {project.tech.map((tech) => (

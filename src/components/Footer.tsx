@@ -9,9 +9,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Texto principal atualizado (versão profissional/corporativa) */}
           <div className="text-center md:text-left">
-            <p className="font-bold text-lg">
-              Lucas Mancini — Desenvolvedor Fullstack
-            </p>
+            <p className="font-bold text-lg">Lucas Mancini — Desenvolvedor Fullstack</p>
             <p className="text-sm text-muted-foreground mt-1">
               Desenvolvimento moderno focado em performance e experiência
             </p>
@@ -51,10 +49,7 @@ const Footer = () => {
 
         {/* Copyright enxuto */}
         <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-          <p>
-            © {new Date().getFullYear()} Lucas Mancini. Todos os direitos
-            reservados.
-          </p>
+          <p>© {new Date().getFullYear()} Lucas Mancini. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

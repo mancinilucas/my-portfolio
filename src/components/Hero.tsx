@@ -41,8 +41,7 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed"
             >
-              Transformando ideias em produtos digitais funcionais e de alto
-              impacto.
+              Transformando ideias em produtos digitais funcionais e de alto impacto.
             </motion.p>
           </div>
 
