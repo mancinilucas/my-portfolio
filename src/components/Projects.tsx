@@ -1,41 +1,43 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { Button } from "@/components/ui/button";
 
 const projects = [
   {
-    title: "E-commerce Platform",
+    title: "Plataforma de gestão inteligente de espaços de trabalho e eventos",
     description:
-      "Plataforma completa de e-commerce com painel administrativo, gestão de produtos e processamento de pagamentos.",
-    tech: ["React", "Node.js", "PostgreSQL", "Stripe"],
+      "Plataforma completa com painel administrativo, gestão de espaços e processamento de pagamentos.",
+    tech: ["Java", "Spring Boot", "Angular", "MySQL", "GCP", "Mercado Pago"],
+    github: "#",
+    demo: "https://hubble.net.br/",
+  },
+  {
+    title: "Sistema de monitoramento de serviços e estabelecimentos públicos",
+    description:
+      "Um projeto para contribuir com a transparência do uso de recursos públicos e privado.",
+    tech: ["Python", "Django", "Django Rest Framework", "PostgreSQL"],
+    github: "https://github.com/mancinilucas/dj-qrcc-api",
+    demo: "https://github.com/mancinilucas/dj-qrcc-api",
+  },
+  {
+    title: "Sistema de Gestão Escolar",
+    description:
+      "Um projeto destinado a cursos de pequeno e médio porte, oferecendo funcionalidades essenciais para a administração acadêmica e financeira.",
+    tech: ["Next.js", "Tailwind", "Node.js", "Express", "Postgres", "JWT"],
     github: "#",
     demo: "#",
   },
   {
-    title: "Task Management App",
+    title: "Página institucional para curso de redação",
     description:
-      "Aplicação de gerenciamento de tarefas com funcionalidades de colaboração em tempo real e notificações.",
-    tech: ["Next.js", "TypeScript", "MongoDB", "Socket.io"],
+      "Criação de Landing Page para curso de redação, focada em reafirmar a marca, demonstrar autoridade no nicho e impulsionar a divulgação e matrículas.",
+    tech: ["React", "Vite", "Tailwind", "Vercel"],
     github: "#",
-    demo: "#",
-  },
-  {
-    title: "Analytics Dashboard",
-    description:
-      "Dashboard analítico com visualizações de dados em tempo real e relatórios personalizáveis.",
-    tech: ["React", "TypeScript", "Chart.js", "Express"],
-    github: "#",
-    demo: "#",
-  },
-  {
-    title: "Social Media API",
-    description:
-      "API RESTful escalável para rede social com autenticação, posts, comentários e sistema de likes.",
-    tech: ["Node.js", "Express", "MongoDB", "JWT"],
-    github: "#",
-    demo: "#",
+    demo: "https://www.redacaocontexto.com.br/",
   },
 ];
 
@@ -53,7 +55,9 @@ const Projects = () => {
           className="space-y-12"
         >
           <div className="space-y-4">
-            <p className="text-primary font-mono text-sm tracking-wider">PORTFÓLIO</p>
+            <p className="text-primary font-mono text-sm tracking-wider">
+              PORTFÓLIO
+            </p>
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
               Projetos em Destaque
             </h2>
@@ -67,7 +71,9 @@ const Projects = () => {
               <motion.div
                 key={project.title}
                 initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                animate={
+                  isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+                }
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group p-8 rounded-lg bg-card border border-border hover:border-primary transition-all hover:shadow-xl"
               >
@@ -97,8 +103,15 @@ const Projects = () => {
                       className="group/btn"
                       asChild
                     >
-                      <a href={project.github} target="_blank" rel="noopener noreferrer">
-                        <Github className="mr-2 h-4 w-4" />
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FontAwesomeIcon
+                          icon={faGithub}
+                          className="mr-2 h-4 w-4"
+                        />
                         Código
                       </a>
                     </Button>
@@ -107,7 +120,11 @@ const Projects = () => {
                       className="group/btn bg-primary hover:bg-primary/90"
                       asChild
                     >
-                      <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <ExternalLink className="mr-2 h-4 w-4" />
                         Demo
                       </a>
