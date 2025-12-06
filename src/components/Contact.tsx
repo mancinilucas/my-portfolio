@@ -18,13 +18,15 @@ const Contact = () => {
           className="text-center space-y-8"
         >
           <div className="space-y-4">
-            <p className="text-primary font-mono text-sm tracking-wider">CONTATO</p>
+            <p className="text-primary font-mono text-sm tracking-wider">
+              CONTATO
+            </p>
             <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
               Vamos trabalhar juntos?
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Estou sempre aberto a discutir novos projetos, ideias criativas ou oportunidades
-              de fazer parte da sua visão.
+              Estou sempre aberto a discutir novos projetos, ideias criativas ou
+              oportunidades de fazer parte da sua visão.
             </p>
           </div>
 
@@ -50,7 +52,11 @@ const Contact = () => {
               className="border-border hover:bg-secondary"
               asChild
             >
-              <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://wa.me/5511999999999"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <MessageSquare className="mr-2 h-5 w-5" />
                 WhatsApp
               </a>

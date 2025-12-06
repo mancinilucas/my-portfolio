@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const Hero = () => {
   return (
@@ -19,7 +21,7 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-muted-foreground font-mono text-sm tracking-wider"
             >
-              OLÁ, EU SOU
+              DESENVOLVEDOR FULLSTACK
             </motion.p>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -27,10 +29,10 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter"
             >
-              Desenvolvedor
+              Lucas Mancini
               <br />
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Fullstack
+                Soluções modernas e escaláveis
               </span>
             </motion.h1>
             <motion.p
@@ -39,8 +41,8 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed"
             >
-              Especializado em criar soluções web modernas, escaláveis e de alto desempenho
-              que transformam ideias em experiências digitais excepcionais.
+              Transformando ideias em produtos digitais funcionais e de alto
+              impacto.
             </motion.p>
           </div>
 
@@ -55,14 +57,17 @@ const Hero = () => {
               className="group bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-xl transition-all"
             >
               Ver Projetos
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              <FontAwesomeIcon
+                icon={faArrowRight}
+                className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1"
+              />
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-border hover:bg-secondary"
+              className="border-border hover:bg-secondary hover:text-secondary-foreground hover:shadow-xl"
             >
-              Entrar em Contato
+              Falar comigo
             </Button>
           </motion.div>
 
@@ -73,26 +78,29 @@ const Hero = () => {
             className="flex gap-4 pt-8"
           >
             <a
-              href="https://github.com"
+              href="https://github.com/mancinilucas"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Github - Lucas Mancini"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              <Github className="h-6 w-6" />
+              <FontAwesomeIcon icon={faGithub} className="h-6 w-6" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/lucasgmancini/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="LinkedIn — Lucas Mancini"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              <Linkedin className="h-6 w-6" />
+              <FontAwesomeIcon icon={faLinkedin} className="h-6 w-6" />
             </a>
             <a
-              href="mailto:contato@exemplo.com"
+              href="mailto:mancinilucas05@gmail.com"
+              aria-label="Enviar email para Lucas Mancini"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              <Mail className="h-6 w-6" />
+              <FontAwesomeIcon icon={faEnvelope} className="h-6 w-6" />
             </a>
           </motion.div>
         </motion.div>

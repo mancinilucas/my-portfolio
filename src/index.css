@@ -37,9 +37,13 @@ All colors MUST be HSL.
     --ring: 162 85% 25%;
 
     --radius: 0.75rem;
-    
+
     /* Custom portfolio tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(162 85% 25%) 0%, hsl(162 85% 35%) 100%);
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(162 85% 25%) 0%,
+      hsl(162 85% 35%) 100%
+    );
     --shadow-card: 0 4px 24px -4px hsl(0 0% 0% / 0.06);
     --shadow-hover: 0 8px 32px -8px hsl(162 85% 25% / 0.15);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -89,7 +93,7 @@ All colors MUST be HSL.
     --border: 0 0% 20%;
     --input: 0 0% 20%;
     --ring: 162 85% 35%;
-    
+
     --shadow-card: 0 4px 24px -4px hsl(0 0% 0% / 0.3);
     --shadow-hover: 0 8px 32px -8px hsl(162 85% 35% / 0.25);
     --sidebar-background: 240 5.9% 10%;
@@ -111,18 +115,27 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground font-sans antialiased;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-semibold tracking-tight;
   }
 }
 
 @layer utilities {
   .font-mono {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: "JetBrains Mono", monospace;
   }
-  
+
   .font-sans {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
+  }
+
+  .text-justify {
+    text-align: justify;
   }
 }
