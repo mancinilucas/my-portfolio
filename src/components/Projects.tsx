@@ -97,35 +97,42 @@ const Projects = () => {
                   </div>
 
                   <div className="flex gap-4 pt-4">
+                    {/* Código (outline) */}
                     <Button
                       variant="outline"
                       size="sm"
-                      className="group/btn"
+                      className="group/btn transition-all duration-200 ease-out hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                       asChild
                     >
                       <a
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label={`Código do projeto ${project.title}`}
+                        className="flex items-center gap-2"
                       >
                         <FontAwesomeIcon
                           icon={faGithub}
-                          className="mr-2 h-4 w-4"
+                          className="mr-2 h-4 w-4 opacity-80 group-hover/btn:opacity-100 transition-all duration-200 ease-out"
                         />
                         Código
                       </a>
                     </Button>
+
+                    {/* Demo (primary) */}
                     <Button
                       size="sm"
-                      className="group/btn bg-primary hover:bg-primary/90"
+                      className="group/btn bg-primary hover:bg-primary/90 transition-all duration-200 ease-out hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                       asChild
                     >
                       <a
                         href={project.demo}
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label={`Abrir demo do projeto ${project.title}`}
+                        className="flex items-center gap-2"
                       >
-                        <ExternalLink className="mr-2 h-4 w-4" />
+                        <ExternalLink className="mr-2 h-4 w-4 opacity-80 group-hover/btn:opacity-100 transition-all duration-200 ease-out" />
                         Demo
                       </a>
                     </Button>
