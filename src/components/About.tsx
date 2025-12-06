@@ -65,9 +65,9 @@ const About: React.FC = () => {
           </div>
 
           {/* Grid: stack until large screens to avoid tablet compression */}
-          <div className="grid lg:grid-cols-2 gap-12 pt-8">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 pt-8">
             {/* Texto principal (sempre acima the timeline visually on stacked layouts) */}
-            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+            <div className="space-y-6 text-base md:text-lg text-muted-foreground leading-relaxed">
               <p className="text-left md:text-justify">
                 Sou <strong>Lucas Mancini</strong>, desenvolvedor fullstack com
                 foco em backend. Entrego soluções digitais com atenção à
@@ -86,7 +86,7 @@ const About: React.FC = () => {
             </div>
 
             {/* Timeline vertical (single column card stack) */}
-            <div className="relative">
+            <div className="relative pl-0 md:pl-8">
               {/* vertical line appears only on md+ */}
               <div className="hidden md:block absolute left-6 top-0 bottom-0 w-px bg-border" />
 
@@ -104,7 +104,7 @@ const About: React.FC = () => {
                       className="relative"
                     >
                       {/* marker: show only on md+ so mobile has no bullets */}
-                      <div className="hidden md:flex absolute left-0 md:left-[-1.25rem] top-6 items-center">
+                      <div className="hidden md:flex absolute left-[-2rem] top-6 items-center">
                         <span
                           className="flex h-3 w-3 rounded-full bg-primary ring-2 ring-card"
                           aria-hidden="true"
@@ -115,23 +115,23 @@ const About: React.FC = () => {
                       </div>
 
                       {/* Card: ensure no compression on tablet by not relying on negative left offsets */}
-                      <div className="p-6 rounded-lg bg-card border border-border shadow-card">
-                        <div className="flex items-start justify-between gap-4">
-                          <div className="min-w-0">
-                            <h3 className="font-semibold text-lg">
+                      <div className="p-4 md:p-6 rounded-lg bg-card border border-border shadow-card">
+                        <div className="flex flex-col sm:flex-row items-start justify-between gap-2 sm:gap-4">
+                          <div className="min-w-0 flex-1">
+                            <h3 className="font-semibold text-base md:text-lg">
                               {exp.role}
                             </h3>
-                            <p className="text-sm text-muted-foreground mt-1 truncate">
+                            <p className="text-sm text-muted-foreground mt-1 break-words">
                               {exp.company}
                             </p>
                           </div>
                           {/* Date: give a stable min-width but allow wrap if needed */}
-                          <div className="text-sm text-muted-foreground min-w-[92px] text-right break-words">
+                          <div className="text-sm text-muted-foreground sm:min-w-[92px] sm:text-right break-words">
                             {exp.period}
                           </div>
                         </div>
 
-                        <p className="mt-4 text-muted-foreground leading-relaxed text-left md:text-justify">
+                        <p className="mt-3 md:mt-4 text-sm md:text-base text-muted-foreground leading-relaxed text-left md:text-justify">
                           {exp.summary}
                         </p>
                       </div>
