@@ -73,7 +73,7 @@ const Hero = () => {
               className="border-border hover:bg-secondary hover:text-secondary-foreground hover:shadow-xl transition-all"
             >
               <a
-                href="https://wa.me/5573988945898"
+                href="https://wa.me/5527998343106"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Abrir chat no WhatsApp"
