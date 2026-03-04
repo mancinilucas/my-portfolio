@@ -57,7 +57,7 @@ const Contact = () => {
               className="border-border hover:bg-secondary hover:text-secondary-foreground hover:shadow-xl"
               asChild
             >
-              <a href="https://wa.me/5573988945898" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/5527998343106" target="_blank" rel="noopener noreferrer">
                 <MessageSquare className="mr-2 h-5 w-5 text" />
                 WhatsApp
               </a>
